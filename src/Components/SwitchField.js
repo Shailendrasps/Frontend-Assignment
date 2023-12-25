@@ -9,6 +9,7 @@ export default function SwitchField(props) {
     const [value, setValue] = useState(false);
     useEffect(() => {
         dataInitiator();
+        // eslint-disable-next-line
     }, [])
 
     const dataInitiator = () => {

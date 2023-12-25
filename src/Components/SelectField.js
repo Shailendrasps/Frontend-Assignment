@@ -9,10 +9,6 @@ export default function SelectField(props) {
 
     const tabData = props.tabData ? props.tabData : "";
 
-    useEffect(() => {
-        dataInitiator();
-    }, [])
-
     const dataInitiator = () => {
         if (tabData !== "") {
             formData[tabData] = {};
@@ -22,6 +18,11 @@ export default function SelectField(props) {
             updateFormData(schema.jsonKey, schema.validate.defaultValue);
         }
     }
+
+    useEffect(() => {
+        dataInitiator();
+        // eslint-disable-next-line
+    }, [])
 
     const changeHandeler = (event) => {
         setValue(event.target.value);

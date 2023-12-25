@@ -8,6 +8,7 @@ export default function RadioField(props) {
     const [selectedTab, setSelectedTab] = useState(schema.validate.defaultValue)
     useEffect(() => {
         dataInitiator();
+        // eslint-disable-next-line
     }, []);
     const dataInitiator = () => {
         updateFormData(schema.jsonKey, schema.validate.defaultValue);
